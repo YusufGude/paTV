@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="video-list">
+        {% for video in videos %}
+            <div class="video-item">
+                <h3>{{ video }}</h3> <!-- Video Adı -->
+                <a href="{{ url_for('video', name=video) }}">
+                    <!-- Videoların küçük resimlerini ekleyebilirsiniz -->
+                    <img src="{{ url_for('static', filename='videos/thumbnails/' + video.split('.')[0] + '.jpg') }}" alt="{{ video }} Thumbnail" width="150">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

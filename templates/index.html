@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- Kategoriler: Diziler ve Filmler -->
+    <div class="category-buttons" style="display: flex; justify-content: center; gap: 40px;">
+        <a href="{{ url_for('videos', category='diziler') }}" 
+           style="padding: 20px 40px; background-color: #166534; color: white; border-radius: 10px; font-size: 1.2em; text-decoration: none;">
+           Diziler
+        </a>
+        <a href="{{ url_for('videos', category='filmler') }}" 
+           style="padding: 20px 40px; background-color: #166534; color: white; border-radius: 10px; font-size: 1.2em; text-decoration: none;">
+           Filmler
+        </a>
+    </div>
+{% endblock %}
